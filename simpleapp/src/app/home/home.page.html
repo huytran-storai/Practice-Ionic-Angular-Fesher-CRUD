@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-title>
+			To do list
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<app-add-button (todoAdded)="add($event)" [selectedTask]="selectedTask"></app-add-button>
+	<app-list-todo [todoLst]="todoLst"
+		(deleteList)="onDelete($event)"
+		(selectTask)="onSelectTask($event)"
+	>
+	</app-list-todo>
+</ion-content>

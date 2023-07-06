@@ -1,0 +1,11 @@
+<ion-list>
+	<ion-item *ngFor="let task of todoLst">
+		<ion-checkbox justify="start" labelPlacement="end">{{task.name}}</ion-checkbox>
+		<ion-button color="danger" size="small" (click)="onDelete(task.id)">
+			<ion-icon name="trash-outline"></ion-icon>
+		</ion-button>
+		<ion-button color="warning" size="small" (click)="edit(task)">
+			<ion-icon name="create-outline"></ion-icon>
+		</ion-button>
+	</ion-item>
+</ion-list>

@@ -1,0 +1,19 @@
+<form [formGroup]="form" novalidate>
+  <ion-item lines="full">
+    <ion-label>Add todo</ion-label>
+    <ion-input
+      formControlName="addTodo"
+      type="text"
+      aria-label="addTodo"
+      placeholder="Enter Todo"
+    ></ion-input>
+    <ion-button color="success" size="small" (click)="add()">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <div *ngIf="form.controls.addTodo.touched && form.controls.addTodo.invalid">
+    <div class="ion-padding" *ngIf="form.controls.addTodo.errors?.required">
+      <ion-text color="danger">Todo is required.</ion-text>
+    </div>
+  </div>
+</form>
