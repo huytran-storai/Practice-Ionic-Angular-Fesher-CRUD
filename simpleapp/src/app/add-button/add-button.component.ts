@@ -53,6 +53,6 @@ export class AddButtonComponent implements OnInit, OnChanges {
 			this.todoAdded.emit(newTodo);
 			this.form?.reset();
 		}
-	}
+	} 
 
 }

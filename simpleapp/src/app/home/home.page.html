@@ -7,10 +7,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-	<app-add-button (todoAdded)="add($event)" [selectedTask]="selectedTask"></app-add-button>
-	<app-list-todo [todoLst]="todoLst"
-		(deleteList)="onDelete($event)"
-		(selectTask)="onSelectTask($event)"
-	>
+	<app-add-button (todoAdded)="add($event)" [selectedTask]="selectedTask">
+		<ion-grid content>
+			<ion-row>
+				<ion-col>
+					<img src="https://picsum.photos/200/300" alt="Random Image">
+				</ion-col>
+				<ion-col>
+					<img src="https://picsum.photos/200/300" alt="Random Image">
+				</ion-col>
+				<ion-col>
+					<img src="https://picsum.photos/200/300" alt="Random Image">
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</app-add-button>
+	<app-list-todo [todoLst]="todoLst" (deleteList)="onDelete($event)" (selectTask)="onSelectTask($event)">
 	</app-list-todo>
 </ion-content>
