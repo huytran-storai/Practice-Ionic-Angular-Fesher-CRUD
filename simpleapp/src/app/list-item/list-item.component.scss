@@ -1,0 +1,32 @@
+
+ion-button {
+    --background: #df6c2f;
+    --background-hover: #df6c2f;
+    --background-activated: #df6c2f;
+    --background-focused: #df6c2f;
+  
+    --color: white;
+  
+    --border-radius: 10px;
+    --border-color: white;
+    --border-style: solid;
+    --border-width: 1px;
+  
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+  
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+.quantity-parent{
+    gap: 30px;
+    .quantity{
+        font-size: large;
+        font-weight: bold;
+    }
+}
+.header-top{
+    margin-top: 5rem;
+}
+.title{
+    font-weight: bolder;
+}

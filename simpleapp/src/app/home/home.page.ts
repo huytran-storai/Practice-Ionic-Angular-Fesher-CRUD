@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ITask } from '../interfaces/task.interface';
 
+
 @Component({
 	selector: 'app-home',
 	templateUrl: 'home.page.html',
@@ -11,7 +12,10 @@ export class HomePage implements OnInit {
 	todoLst: ITask[] = [];
 	selectedTask!: ITask;
 
-	constructor() { }
+	constructor(
+	) {
+		
+	}
 
 	ngOnInit() {
 
@@ -27,6 +31,6 @@ export class HomePage implements OnInit {
 
 	onSelectTask(task: ITask) {
 		this.selectedTask = task;
-		console.log("----> Check Selected Task",this.selectedTask);
+		console.log("----> Check Selected Task", this.selectedTask);
 	}
 }

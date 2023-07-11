@@ -11,8 +11,8 @@
       <ion-icon name="add-circle-outline"></ion-icon>
     </ion-button>
   </ion-item>
-  <div *ngIf="form.controls.addTodo.touched && form.controls.addTodo.invalid">
-    <div class="ion-padding" *ngIf="form.controls.addTodo.errors?.required">
+  <div *ngIf="addTodoCtrl?.touched && addTodoCtrl?.invalid">
+    <div class="ion-padding" *ngIf="addTodoCtrl?.errors?.required">
       <ion-text color="danger">Todo is required.</ion-text>
     </div>
   </div>

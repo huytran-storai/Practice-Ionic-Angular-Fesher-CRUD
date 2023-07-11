@@ -1,0 +1,37 @@
+<ion-menu side="start" contentId="main-content">
+	<ion-header>
+		<ion-toolbar>
+			<ion-title>Menu Content</ion-title>
+		</ion-toolbar>
+	</ion-header>
+	<ion-content class="ion-padding">
+		<ion-col>
+			<div class="avatar">
+
+			</div>
+			<ion-col>
+        <ion-menu-toggle>
+          <ion-row class="ion-align-items-center menu-content" (click)="navigateTo('home')">
+            <ion-icon name="home-outline"></ion-icon>
+            <p>Home</p>
+          </ion-row>
+        </ion-menu-toggle>
+			
+        <ion-menu-toggle>
+          <ion-row class="ion-align-items-center menu-content" (click)="navigateTo('manage-store')">
+            <ion-icon name="people-outline"></ion-icon>
+            <p>Manage Store</p>
+          </ion-row>  
+        </ion-menu-toggle>
+			
+				<ion-row class="ion-align-items-center menu-content">
+					<ion-icon name="log-out-outline"></ion-icon>
+					<p>Log Out</p>
+				</ion-row>
+			</ion-col>
+		</ion-col>
+	</ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+</div>

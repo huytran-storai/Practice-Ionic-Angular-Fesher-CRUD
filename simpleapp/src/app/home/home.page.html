@@ -1,27 +1,21 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
 	<ion-toolbar>
 		<ion-title>
-			To do list
+			<h1>Home</h1>
 		</ion-title>
 	</ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
-	<app-add-button (todoAdded)="add($event)" [selectedTask]="selectedTask">
-		<ion-grid content>
-			<ion-row>
-				<ion-col>
-					<img src="https://picsum.photos/200/300" alt="Random Image">
-				</ion-col>
-				<ion-col>
-					<img src="https://picsum.photos/200/300" alt="Random Image">
-				</ion-col>
-				<ion-col>
-					<img src="https://picsum.photos/200/300" alt="Random Image">
-				</ion-col>
-			</ion-row>
-		</ion-grid>
-	</app-add-button>
-	<app-list-todo [todoLst]="todoLst" (deleteList)="onDelete($event)" (selectTask)="onSelectTask($event)">
-	</app-list-todo>
+	test
+	  <div class="ion-page" id="main-content">
+		<ion-content class="ion-padding">
+			<app-list-item></app-list-item>
+		</ion-content>
+	  </div>
+	<!-- <app-add-button (todoAdded)="add($event)" [selectedTask]="selectedTask">
+	</app-add-button> -->
+	
+	<!-- <app-list-todo [todoLst]="todoLst" (deleteList)="onDelete($event)" (selectTask)="onSelectTask($event)">
+	</app-list-todo> -->
 </ion-content>

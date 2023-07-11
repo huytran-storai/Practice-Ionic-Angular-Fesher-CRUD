@@ -9,11 +9,12 @@ import { ITask } from '../interfaces/task.interface';
 })
 export class AddButtonComponent implements OnInit, OnChanges {
 
-	form: FormGroup | any;
-	@Input() selectedTask: any;
+	form!: FormGroup;
+	@Input() selectedTask!: ITask;
 	@Output() todoAdded: EventEmitter<any> = new EventEmitter<any>();
+
 	constructor(
-		public formBuilder: FormBuilder,
+		private formBuilder: FormBuilder,
 	) {
 
 	}
@@ -25,7 +26,6 @@ export class AddButtonComponent implements OnInit, OnChanges {
 	}
 
 	ngOnChanges(changes: SimpleChanges): void {
-		console.log('<--- changes --->', changes);
 		this.selectedTask = changes['selectedTask'].currentValue;
 		this.setFormData();
 	}
@@ -36,15 +36,15 @@ export class AddButtonComponent implements OnInit, OnChanges {
 		});
 	}
 
-	get errorControl() {
-		return this.form.controls;
+	get addTodoCtrl() {
+		return this.form.get('addTodo');
 	}
 
 	add() {
 		if (this.selectedTask) {
 			this.selectedTask.name = this.form?.value.addTodo;
 			this.form?.reset();
-			this.selectedTask = null;
+			this.selectedTask = {};
 		} else {
 			const newTodo: ITask = {
 				id: (Math.floor(Math.random() * 1000) + 1).toString(),
